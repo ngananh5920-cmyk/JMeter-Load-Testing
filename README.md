@@ -46,10 +46,12 @@ Tìm hiểu và thực hành sử dụng Apache JMeter để kiểm thử hiệu
 ### 3.1. Test Plan
 * Test Plan là thành phần gốc của JMeter, dùng để quản lý toàn bộ kịch bản kiểm thử.
 * Trong bài thực hành này, Test Plan bao gồm: Thread Group (Load Test API), HTTP Request (Get Post), View Results Tree và Summary Report.
+<img width="1470" height="956" alt="Ảnh màn hình 2026-06-03 lúc 16 49 22" src="https://github.com/user-attachments/assets/f266e928-6415-4933-b4a4-04e755d61f23" />
 
 ### 3.2. Thread Group
 * Thread Group dùng để mô phỏng người dùng ảo truy cập hệ thống.
 * Dựa trên tổng số mẫu sinh ra trong Summary Report, kịch bản được cấu hình để thực hiện tổng cộng 150 requests.
+<img width="1470" height="956" alt="Ảnh màn hình 2026-06-03 lúc 16 49 58" src="https://github.com/user-attachments/assets/06c934f5-c201-45d8-a4c6-141523da169f" />
 
 ### 3.3. HTTP Request
 HTTP Request được sử dụng để gửi yêu cầu đến API với thông số cấu hình:
@@ -57,6 +59,7 @@ HTTP Request được sử dụng để gửi yêu cầu đến API với thông
 * **Protocol:** https
 * **Server Name:** jsonplaceholder.typicode.com
 * **Path:** /posts
+<img width="1470" height="956" alt="Ảnh màn hình 2026-06-03 lúc 16 51 37" src="https://github.com/user-attachments/assets/ac2feac4-d94c-4b2c-b489-097b245b175a" />
 
 ### 3.4. Response Assertion
 Response Assertion dùng để kiểm tra dữ liệu trả về từ API có đúng kỳ vọng hay không:
@@ -64,11 +67,16 @@ Response Assertion dùng để kiểm tra dữ liệu trả về từ API có đ
 * **Field to Test:** Text Response
 * **Pattern Matching Rules:** Contains
 * **Patterns to Test:** `"id"` *(Kiểm tra trong chuỗi JSON trả về bắt buộc phải có thuộc tính "id")*
+<img width="1470" height="956" alt="Ảnh màn hình 2026-06-03 lúc 16 55 20" src="https://github.com/user-attachments/assets/8473d464-9269-4c35-b3a3-965543d8daad" />
 
 ### 3.5. Listener
 Các Listener được sử dụng trong bài:
 * **View Results Tree:** Xem chi tiết kết quả trả về của từng request *(Response code, Response message, kích thước dữ liệu, thời gian phản hồi...)*.
+
+<img width="1470" height="956" alt="Ảnh màn hình 2026-06-03 lúc 17 07 09" src="https://github.com/user-attachments/assets/9230a63b-d1c2-405b-8acc-c2049e71a824" />
+
 * **Summary Report:** Xem bảng thống kê tổng hợp toàn bộ hiệu năng của lượt kiểm thử.
+<img width="1470" height="956" alt="Ảnh màn hình 2026-06-03 lúc 17 07 13" src="https://github.com/user-attachments/assets/cc423691-e232-4474-b0e4-e49c52d3e073" />
 
 ---
 
